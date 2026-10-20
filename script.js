@@ -204,7 +204,7 @@ document.addEventListener('touchmove',e=>{if(!e.target.closest('input'))e.preven
 document.addEventListener('dblclick',e=>{if(!e.target.closest('input'))e.preventDefault()});
 function fs(){try{const d=document.documentElement,f=d.requestFullscreen||d.webkitRequestFullscreen;if(f&&!document.fullscreenElement)f.call(d);if(screen.orientation&&screen.orientation.lock)screen.orientation.lock('landscape').catch(()=>{})}catch(e){}}
 const rsg=()=>{if(!(document.activeElement&&document.activeElement.tagName==='INPUT'))rs()};
-addEventListener('resize',rsg);addEventListener('orientationchange',()=>{[100,300,700,1200].forEach(t=>setTimeout(rsg,t))});if(matchMedia('(pointer:coarse)').matches)addEventListener('pointerdown',fs,{once:true});if(window.visualViewport)visualViewport.addEventListener('resize',rsg);
+addEventListener('resize',rsg);addEventListener('orientationchange',()=>{[100,300,700,1200].forEach(t=>setTimeout(rsg,t))});if(matchMedia('(pointer:coarse)').matches){const tf=()=>{if(document.fullscreenElement||document.webkitFullscreenElement){removeEventListener('pointerup',tf);return}fs()};addEventListener('pointerup',tf)}if(window.visualViewport)visualViewport.addEventListener('resize',rsg);
 ['un','pw','pc'].forEach(i=>$(i).addEventListener('blur',()=>setTimeout(()=>{scrollTo(0,0);rs()},80)));
 if(/iPhone|iPad|iPod/.test(navigator.userAgent)&&!navigator.standalone)$('ios').classList.remove('hide');
 requestAnimationFrame(loop);boot();
