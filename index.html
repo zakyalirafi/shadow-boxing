@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Shadow Boxing</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<div id="stage"><div id="box">
+<canvas id="cv"></canvas>
+<div id="pad"><div id="js"><div id="kn"></div></div><div class="ab" id="bj" data-a="j">PUKUL</div><div class="ab" id="bk" data-a="k">KUAT</div><div class="ab" id="bu" data-a="u">LOMPAT</div><div class="ab" id="bb" data-a="b">TAHAN</div></div>
+<div id="auth" class="ov scr">
+<div class="logo">SHADOW BOXING</div>
+<p>Buat akun atau masuk untuk mulai bertarung</p>
+<div class="panel">
+<div class="tabs"><button id="tl" class="on">MASUK</button><button id="tr">DAFTAR</button></div>
+<label>Username<input id="un" maxlength="12" autocomplete="username" placeholder="mis. ShadowKing"></label>
+<label>Password<input id="pw" type="password" autocomplete="current-password" placeholder="minimal 6 karakter"></label>
+<label id="cfl" class="hide">Ulangi Password<input id="pc" type="password" autocomplete="new-password" placeholder="ketik ulang password"></label>
+<div id="ae" class="err"></div>
+<button class="btn m" id="ago" style="width:auto">MASUK</button>
+</div>
+<p class="note">Akun tersimpan di browser perangkat ini</p>
+</div>
+<div id="home" class="ov scr hide">
+<div class="top"><div class="who"><div class="av" id="av">S</div><div><b id="hn">Nama</b><small>Petarung</small></div></div><button class="sm" id="lo">Keluar</button></div>
+<div class="logo">SHADOW BOXING</div>
+<div class="stats"><div><b id="s1">0</b><span>MAIN</span></div><div><b id="s2">0</b><span>MENANG</span></div><div><b id="s3">0</b><span>KALAH</span></div><div><b id="s4">0%</b><span>WIN RATE</span></div></div>
+<button class="btn m big" id="go" style="width:12em">MULAI BERTARUNG</button>
+<div class="lb"><b>PERINGKAT DI PERANGKAT INI</b><ol id="lbl"></ol></div>
+</div>
+<div id="chs" class="ov scr hide"><h2>PILIH KARAKTER</h2><div class="cards" id="cc"></div><div class="nav"><button class="btn g" data-go="home">‹ Kembali</button><button class="btn m" id="chn">Lanjut ›</button></div></div>
+<div id="mps" class="ov scr hide"><h2>PILIH ARENA</h2><div class="cards" id="mc"></div><div class="nav"><button class="btn g" data-go="chs">‹ Kembali</button><button class="btn m" id="mpn">Lanjut ›</button></div></div>
+<div id="dif" class="ov scr hide"><h2>PILIH KESULITAN</h2><p id="dsum"></p>
+<div class="keys"><span><kbd>A</kbd><kbd>D</kbd> gerak</span><span><kbd>W</kbd> tap lompat · tahan bertahan</span><span><kbd>J</kbd> pukul</span><span><kbd>K</kbd> kuat</span><span><kbd>P</kbd> jeda</span></div>
+<p>HP: pakai joystick dan tombol di layar</p>
+<div id="lv"></div><button class="btn g" data-go="mps" style="width:9em">‹ Kembali</button></div>
+<div id="pause" class="ov hide"><div class="logo">JEDA</div><button class="btn m" id="rs">Lanjut</button><button class="btn g" id="pm">Menu</button></div>
+<div id="end" class="ov hide"><div class="logo" id="et">VICTORY</div><p id="es"></p><button class="btn m" id="ag">Main lagi</button><button class="btn g" id="em">Menu</button></div>
+</div><div id="rot" class="ov"><div class="logo">PUTAR HP</div><p>Mainkan dalam mode landscape (layar mendatar)</p></div></div>
+<script src="script.js"></script></body></html>
